@@ -1,0 +1,154 @@
+.signup-screen-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  .header {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    width: 300px;
+    max-width: 80%;
+    height: auto;
+  }
+  
+  .signup-form-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .signup-form {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(128, 90, 213, 0.2);
+    border: 1px solid rgba(128, 90, 213, 0.3);
+  }
+  
+  .signup-provider {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: rgba(128, 90, 213, 0.3);
+  }
+  
+  .divider::before {
+    left: 0;
+  }
+  
+  .divider::after {
+    right: 0;
+  }
+  
+  .divider span {
+    background-color: #1a1a1a;
+    padding: 0 10px;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .signup-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(128, 90, 213, 0.5);
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .signup-input:focus {
+    outline: none;
+    border-color: rgb(128, 90, 213);
+  }
+  
+  .password-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .show-password-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .sign-up-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(128, 90, 213);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .sign-up-btn:hover {
+    background-color: rgb(148, 110, 233);
+  }
+  
+  .login-link {
+    color: rgb(128, 90, 213);
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .signup-form {
+      padding: 20px;
+    }
+  
+    .signup-input {
+      padding: 10px;
+    }
+  }

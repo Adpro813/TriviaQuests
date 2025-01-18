@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background: black;
   margin: 0;
   height: 100vh;
   color: white;
@@ -17,7 +17,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 0px;
+  /* background-color: white; */
 }
 
 .logo {
@@ -31,17 +32,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
+  padding: 5px;
 }
-
+.login-provider
+{
+    background-color: black;
+    height: 50px;
+    margin-bottom: 15px;
+}
 .login-form {
   background-color: #1a1a1a;
   border-radius: 10px;
   padding: 30px;
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   box-shadow: 0 0 10px rgba(128, 90, 213, 0.2);
   border: 3px solid rgba(128, 90, 213, 0.3);
+  height: 300px;
 }
 
 .form-fields {
@@ -56,7 +63,8 @@ body {
   border: 1px solid rgba(128, 90, 213, 0.5);
   border-radius: 5px;
   background-color: #2a2a2a;
-  color: white;
+  font-weight: bold;
+  color: #ced7e8e8;
   font-size: 16px;
   box-sizing: border-box;
 }
@@ -99,14 +107,14 @@ body {
   background-color: rgb(148, 110, 233);
 }
 
-.forgot-password {
+.signup {
   color: rgb(128, 90, 213);
   text-decoration: none;
   text-align: center;
   font-size: 14px;
 }
 
-.forgot-password:hover {
+.signup:hover {
   text-decoration: underline;
 }
 
