@@ -1,8 +1,7 @@
 import "./styles/LoginScreen.css";
 import { FaEye } from "react-icons/fa";
-// import useRoute from "react-router-dom";
+import { Link } from "react-router-dom";
 function LoginScreen() {
-//   const navigate = useRoute();
   return (
     <div className="login-screen-container">
       <div className="header">
@@ -27,9 +26,9 @@ function LoginScreen() {
               </button>
             </div>
             <button className="sign-in-btn">Sign In</button>
-            <a href="#" className="signup">
+            <Link to="/register" className="signup">
               Sign Up
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import "./styles/SignupScreen.css";
 import { FaEye } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 function SignupScreen() {
   return (
     <div className="signup-screen-container">
@@ -45,9 +45,9 @@ function SignupScreen() {
               </button>
             </div>
             <button className="sign-up-btn">Sign Up</button>
-            <a href="#" className="login-link">
+            <Link to="/" className="login-link">
               Already have an account? Log in
-            </a>
+            </Link>
           </div>
         </div>
       </div>
