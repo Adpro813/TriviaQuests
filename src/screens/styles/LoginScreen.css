@@ -1,0 +1,44 @@
+body {
+  background-color: black;
+  margin: 0; /* Remove default margin */
+  height: 100vh; /* Set body height to full viewport height */
+}
+
+.login-screen-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.logo
+{
+    width: 200px;
+}
+.login-form-container {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  background-color: darkblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  width: 60%; /* Removed quotes around percentage */
+  height: 400px;
+}
+
+.login-text {
+  background-color: white;
+}

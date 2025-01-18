@@ -1,9 +1,7 @@
-
+import LoginScreen from "./screens/LoginScreen"
 function App() {
   return (
-    <div className="App">
-      hi
-    </div>
+   <LoginScreen/>
   );
 }
 
