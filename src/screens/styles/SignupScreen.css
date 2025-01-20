@@ -43,6 +43,7 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
+
   }
   
   .divider {
@@ -113,6 +114,7 @@
     color: #666;
     cursor: pointer;
     padding: 0;
+    font-size: 20px;
   }
   
   .sign-up-btn {
@@ -151,4 +153,8 @@
     .signup-input {
       padding: 10px;
     }
+  }
+
+  .google-button {
+    height: 100%;
   }
