@@ -1,9 +1,17 @@
+/*
+TODO: sign in button isnt working
+**/
 import "./styles/LoginScreen.css";
 import { FaEye } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import GoogleButton from "react-google-button";
 import { useEffect, useState } from "react";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 function LoginScreen() {
   const [showPassword, setShowPassword] = useState(false);
@@ -24,7 +32,7 @@ function LoginScreen() {
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
-        navigate('/home')
+        navigate("/home");
       })
       .catch((error) => {
         console.error("Google login error:", error);
@@ -60,13 +68,13 @@ function LoginScreen() {
             <span>or</span>
           </div>
           <form className="form-fields" onSubmit={handleLogin}>
-            <input 
-              type="email" 
-              placeholder="Email" 
+            <input
+              type="email"
+              placeholder="Email"
               className="login-input"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required 
+              required
             />
             <div className="password-container">
               <input
@@ -77,7 +85,7 @@ function LoginScreen() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <button 
+              <button
                 type="button"
                 className="show-password-btn"
                 onClick={() => setShowPassword(!showPassword)}
@@ -85,7 +93,9 @@ function LoginScreen() {
                 <FaEye />
               </button>
             </div>
-            <button type="submit" className="sign-in-btn">Sign In</button>
+            <button type="submit" className="sign-in-btn" onClick={handleLogin}>
+              Sign In
+            </button>
             <Link to="/register" className="signup">
               Sign Up
             </Link>

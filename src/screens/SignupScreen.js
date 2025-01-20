@@ -1,9 +1,14 @@
 import "./styles/SignupScreen.css";
 import { FaEye } from "react-icons/fa";
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoogleButton from "react-google-button";
 import { useEffect, useState } from "react";
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
 function SignupScreen() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -29,7 +34,7 @@ function SignupScreen() {
       .then((result) => {
         // Handle successful signup
         const user = result.user;
-        navigate('/')
+        navigate("/");
       })
       .catch((error) => {
         // Handle errors
@@ -39,7 +44,7 @@ function SignupScreen() {
 
   function handleSignup(e) {
     e.preventDefault();
-    
+
     if (password !== confirmPassword) {
       alert("Passwords don't match!");
       return;
@@ -49,7 +54,7 @@ function SignupScreen() {
       .then((userCredential) => {
         // Handle successful signup
         const user = userCredential.user;
-        console.log("Signed up with email:", user);
+        navigate("/")
       })
       .catch((error) => {
         // Handle errors
@@ -71,15 +76,15 @@ function SignupScreen() {
               <GoogleButton onClick={signupWithGoogle} />
             </div>
           </div>
-          
+
           <div className="divider">
             <span>or</span>
           </div>
 
           <form className="form-fields" onSubmit={handleSignup}>
-            <input 
-              type="email" 
-              placeholder="Email" 
+            <input
+              type="email"
+              placeholder="Email"
               className="signup-input"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -94,7 +99,7 @@ function SignupScreen() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <button 
+              <button
                 type="button"
                 className="show-password-btn"
                 onClick={() => setShowPassword(!showPassword)}
@@ -111,7 +116,7 @@ function SignupScreen() {
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
               />
-              <button 
+              <button
                 type="button"
                 className="show-password-btn"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
@@ -119,7 +124,13 @@ function SignupScreen() {
                 <FaEye />
               </button>
             </div>
-            <button type="submit" className="sign-up-btn">Sign Up</button>
+            <button
+              type="submit"
+              className="sign-up-btn"
+              onClick = {handleSignup}
+            >
+              Sign Up
+            </button>
             <Link to="/" className="login-link">
               Already have an account? Log in
             </Link>
