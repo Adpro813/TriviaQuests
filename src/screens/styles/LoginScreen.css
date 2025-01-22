@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: radial-gradient(ellipse at top right, #0f172a, #020617, #001f3f);
   margin: 0;
   height: 100vh;
   color: white;
